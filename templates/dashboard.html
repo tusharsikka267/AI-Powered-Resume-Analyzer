@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Your personalised feedback</h2>
+<pre>{{ feedback }}</pre>
+
+<h2>Top Matching Jobs</h2>
+<ul>
+  {% for job in jobs %}
+  <li>
+    <strong>{{ job.title }}</strong> – {{ job.company }}<br>
+    {{ job.description[:200] }}...
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

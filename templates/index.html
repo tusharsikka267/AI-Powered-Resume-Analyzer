@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ResumeMatch AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>ResumeMatch <span>AI</span></h1>
+        <p>Upload your resume and get instant AI-powered feedback</p>
+        
+        <form method="POST" action="/upload" enctype="multipart/form-data">
+            <label for="resume">Choose PDF Resume:</label>
+            <input type="file" name="resume" id="resume" accept=".pdf" required>
+            <button type="submit">Get Feedback</button>
+        </form>
+
+        {% if feedback %}
+        <div class="result-box">
+            <h2>AI Feedback</h2>
+            <pre>{{ feedback }}</pre>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

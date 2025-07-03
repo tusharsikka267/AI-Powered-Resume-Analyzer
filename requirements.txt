@@ -1,0 +1,12 @@
+Flask==3.0.2
+flask-pymongo==2.3.0
+pymongo[srv]==4.7.0
+python-dotenv==1.0.1
+PyMuPDF==1.24.2
+openai==0.28.1
+
+# any  sentence‑transformers version ≥3.0 works; 5.x is the latest
+sentence-transformers==5.0.0
+
+spacy==3.7.4
+gunicorn==22.0.0
